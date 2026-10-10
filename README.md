@@ -1,6 +1,6 @@
 # Go Color
 
-Aplicação web simples em Go. A página mostra a cor configurada para a branch e o hostname do container.
+Aplicação web simples em Go. A página mostra a cor configurada para a branch, o hostname e o IP privado do container, além do horário local. As respostas são enviadas com cabeçalhos que impedem o navegador e proxies de armazenarem cache.
 
 ## Executar com Docker Compose
 
