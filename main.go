@@ -45,7 +45,7 @@ var page = template.Must(template.New("page").Parse(`<!doctype html>
 		<p>Cor servida por uma aplicação Go</p>
 		<p>Hostname: <span class="hostname">{{.Hostname}}</span></p>
 		<p>IP privado: <span class="hostname">{{.PrivateIP}}</span></p>
-		<p>Horário: <span class="hostname">{{.CurrentTime}}</span></p>
+		<p>Data e hora: <span class="hostname">{{.CurrentTime}}</span></p>
 	</main>
 </body>
 </html>`))
@@ -102,7 +102,7 @@ func main() {
 			Color:       defaultColor,
 			Hostname:    hostname,
 			PrivateIP:   privateIPv4(),
-			CurrentTime: time.Now().Format("02/01/2006 15:04:05 MST"),
+			CurrentTime: time.Now().Format("02/01/2006 15:04:05.000 MST"),
 		}
 		if err := page.Execute(w, data); err != nil {
 			log.Printf("erro ao renderizar a página: %v", err)
