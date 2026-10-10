@@ -12,6 +12,14 @@ docker compose up --build
 
 Acesse <http://localhost:8080>. Para encerrar, use `Ctrl+C`.
 
+Para executar sem publicar a porta no host, use o Compose interno:
+
+```sh
+docker compose -f compose.internal.yaml up --build
+```
+
+Nesse modo, a aplicação continua acessível na porta 8080 por outros containers conectados à rede do Compose.
+
 Branches disponíveis:
 
 - `vermelho`
