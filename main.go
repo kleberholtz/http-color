@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	defaultColor = "#dc2626"
-	defaultName  = "Vermelho"
+	defaultColor = "#16a34a"
+	defaultName  = "Verde"
 )
 
 var page = template.Must(template.New("page").Parse(`<!doctype html>
